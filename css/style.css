@@ -57,10 +57,20 @@ body {
 }
 
 .sup-title {
+    display: flex;
+    align-items: center;
     font-size: 11px;
     line-height: 15px;
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.6);
+}
+
+.sup-title::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+    margin-right: 20px;
 }
 
 .title {
@@ -161,6 +171,8 @@ body {
 }
 
 .list.aside {
+    display: flex;
+    flex-direction: column;
     width: 100px;
     background-color: #fff;
 }
@@ -189,25 +201,26 @@ body {
     margin-bottom: 144px;
 }
 
-.hero-slider {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .hero {
     font-size: 72px;
     line-height: 85px;
     color: var(--priority-title-color);
 }
 
+.hero-slider {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .slider {
     padding: 0;
-    width: 60px;
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    color: rgba(157, 164, 189, 0.6);
     border: transparent;
-    text-decoration: underline;
     letter-spacing: 0.1em;
     text-transform: none;
     background-color: transparent;
@@ -308,6 +321,21 @@ body {
 .list-item-prices {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.list-item-prices>p {
+    order: -1;
+}
+
+.list-item-prices::before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    padding-left: 12px;
+    background-color: currentColor;
+    flex-grow: 1;
 }
 
 .list.prices.left {
@@ -336,17 +364,23 @@ body {
     display: flex;
     flex-direction: row;
     padding-left: 70px;
-    padding-right: 100px;
+    gap: 130px;
 }
 
 .list.why {
-    margin-right: 130px;
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 .list-item-why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 170px;
     height: 133px;
-    padding: 20px 24px;
+    padding: 20px 20px;
     background: #F7F7F7;
     font-weight: 700;
     font-size: 42px;
@@ -354,11 +388,11 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--secondary-text-color);
 }
 
-.list-item-why:not(:last-child) {
-    margin-bottom: 30px;
+.list-item-why:nth-child(even) {
+    margin-top: 35px;
+    margin-left: 30px;
 }
 
 .sub-num {
@@ -366,9 +400,19 @@ body {
     font-weight: 600;
     text-align: center;
     color: #303030;
+    text-transform: none;
+    font-size: 11px;
+    line-height: 15px;
 }
 
-.plus {
+.number {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.number::after {
+    content: '+';
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
@@ -379,10 +423,6 @@ body {
 .sup-title.why,
 .title.why {
     margin-bottom: 20px;
-}
-
-.why-text {
-    width: 500px;
 }
 
 .why {
@@ -443,16 +483,19 @@ body {
 }
 
 .link-some {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
-    padding: 12px;
     border-radius: 50%;
     background-color: #fff;
 }
 
-.link-some:hover,
-.link-some:focus {
-    fill: #ff6c00;
+.link-some:hover .icon-some,
+.link-some:focus .icon-some {
+    fill: var(--orange-color);
+    ;
 }
 
 /* Portfolio */
@@ -498,7 +541,7 @@ body {
     background-color: #191C26;
     background-image: url(../img/contact_bg.webp);
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 50% 100%;
     background-position: right;
 }
 
@@ -539,7 +582,6 @@ input {
     font-size: 11px;
     line-height: 15px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: #ffffff;
 }
 
@@ -612,12 +654,23 @@ input {
     letter-spacing: 0.2em;
     color: #9da4bd;
     text-transform: none;
+    font-size: 11px;
+    line-height: 15px;
 }
 
-.some-footer {
+.list.some-footer {
     display: flex;
+    align-items: center;
     margin-left: auto;
     gap: 40px;
+    color: var(--secondary-text-color);
+}
+
+.list.some-footer::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
 }
 
 .some {
