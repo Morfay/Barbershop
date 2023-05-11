@@ -84,7 +84,7 @@ body {
 .container {
     margin: 0 auto;
     width: 1170px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     /* padding-left: 15px;
     padding-right: 15px; */
 }
@@ -276,7 +276,8 @@ body {
 
 .section.services {
     padding: 120px 0;
-    background-image: url(../img/services_and_prices.jpg);
+    background-image: url(../img/services_and_prices.webp);
+    background-color: #111319;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -494,11 +495,11 @@ body {
 .section.booking {
     padding-top: 130px;
     padding-bottom: 120px;
-    background-image: url(../img/contact_bg.jpg);
     background-color: #191C26;
+    background-image: url(../img/contact_bg.webp);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 953px;
+    background-size: 50%;
+    background-position: right;
 }
 
 .container.booking {
