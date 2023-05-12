@@ -210,30 +210,31 @@ body {
 .hero-slider {
     display: flex;
     justify-content: flex-end;
+    gap: 24px;
 }
 
-.slider {
-    padding: 0;
-    font-family: "Open Sans";
-    font-style: normal;
+.button-slider {
+    padding: 8px 0;
+    width: 60px;
+    height: 31px;
+    border-color: transparent transparent rgba(157, 164, 189, 0.6) transparent;
+    border-radius: 3px;
     font-weight: 600;
     font-size: 11px;
     line-height: 15px;
     color: rgba(157, 164, 189, 0.6);
-    border: transparent;
     letter-spacing: 0.1em;
-    text-transform: none;
     background-color: transparent;
 }
 
-.slider:hover,
-.slider:focus {
+.button-slider:hover,
+.button-slider:focus {
     color: #ffffff;
+    border-color: transparent transparent #fff transparent;
 }
 
 .back {
     text-align: left;
-    margin-right: 24px;
 }
 
 .forward {
@@ -547,6 +548,7 @@ body {
 
 .container.booking {
     display: flex;
+    padding-right: 10px;
 }
 
 .booking-form {
@@ -564,13 +566,16 @@ body {
 }
 
 .name-tel>input {
-    width: 270px;
-    margin-bottom: 53px;
+    /* width: 270px; */
+    width: calc((100% - 30px)/2);
+    margin-bottom: 44px;
+    gap: 30px;
 }
 
 .message {
     height: 76px;
     width: 100%;
+    padding-bottom: 60px;
     margin-bottom: 44px;
 }
 
@@ -582,6 +587,9 @@ input {
     font-size: 11px;
     line-height: 15px;
     letter-spacing: 0.1em;
+    border-color: transparent transparent rgba(157, 164, 189, 0.6) transparent;
+    padding-bottom: 8px;
+    border-radius: 3px;
     color: #ffffff;
 }
 
