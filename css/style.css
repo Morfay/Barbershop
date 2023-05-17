@@ -18,7 +18,27 @@ p {
 }
 
 button {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--priority-title-color);
+    background-color: transparent;
     cursor: pointer;
+    padding: 12px 0;
+    min-width: 160px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid var(--orange-color);
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: var(--orange-color);
+    color: var(--priority-title-color)
 }
 
 address {
@@ -105,28 +125,58 @@ body {
     color: var(--orange-color);
 }
 
-.button-booking {
-    padding: 12px 0;
-    width: 160px;
-    height: 40px;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--priority-title-color);
-    border: 1px solid var(--orange-color);
-    border-radius: 25px;
-
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(108, 112, 129, 0.8);
+    transition: 250ms;
 }
 
-.button-booking:hover,
-.button-booking:focus {
-    background-color: var(--orange-color);
-    color: #ffffff;
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: 250ms;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    padding: 15px;
+    background-color: #191C26;
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(50%, -100%);
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.icon-close {
+    fill: #fff;
 }
 
 /* Header */
-.section.header {
-    background-color: bisque;
+.page-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(90, 90, 90, 0.5);
     padding: 32px 0;
 }
 
@@ -214,23 +264,30 @@ body {
 }
 
 .button-slider {
-    padding: 8px 0;
-    width: 60px;
-    height: 31px;
-    border-color: transparent transparent rgba(157, 164, 189, 0.6) transparent;
-    border-radius: 3px;
-    font-weight: 600;
+    min-width: 60px;
+    border-color: transparent;
     font-size: 11px;
     line-height: 15px;
-    color: rgba(157, 164, 189, 0.6);
     letter-spacing: 0.1em;
+    text-transform: none;
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.button-slider:hover {
+    color: #ffffff;
     background-color: transparent;
 }
 
-.button-slider:hover,
-.button-slider:focus {
-    color: #ffffff;
-    border-color: transparent transparent #fff transparent;
+.button-slider::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.6);
+}
+
+.button-slider:hover::after {
+    background-color: #fff;
 }
 
 .back {
@@ -351,7 +408,7 @@ body {
     color: var(--priority-title-color);
 }
 
-.button-booking.services {
+button.services {
     display: block;
     margin: 0 auto;
 }
@@ -521,7 +578,6 @@ body {
 .link-some:hover .icon-some,
 .link-some:focus .icon-some {
     fill: var(--orange-color);
-    ;
 }
 
 /* Portfolio */
@@ -579,6 +635,10 @@ body {
 .booking-form {
     width: 50%;
     padding-right: 10px;
+}
+
+.booking-form.modal {
+    width: 100%;
 }
 
 .title.booking {
@@ -639,18 +699,6 @@ input {
     height: 1px;
     display: block;
     background-color: rgba(157, 164, 189, 0.6);
-}
-
-.button-booking.send {
-    background-color: transparent;
-    font-weight: 600;
-    line-height: 16px;
-}
-
-.button-booking.send:hover,
-.button-booking.send:focus {
-    background-color: var(--orange-color);
-    color: #ffffff;
 }
 
 .contacts {
