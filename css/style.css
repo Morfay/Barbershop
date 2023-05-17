@@ -458,12 +458,9 @@ body {
     width: calc((100% - 60px)/3);
 }
 
-.barber-photo {
-    margin-bottom: 30px;
-}
-
 .thumb {
     position: relative;
+    overflow: hidden;
 }
 
 .thumb::before {
@@ -477,17 +474,20 @@ body {
     background-color: rgba(157, 164, 189, 0.5);
     display: inline-block;
     position: absolute;
+    transform: translate(0, 100%);
     opacity: 0;
-    transition: 250ms;
+    transition: 400ms;
     overflow: auto;
 }
 
 .thumb:hover::before,
 .thumb:focus::before {
     opacity: 1;
+    transform: translate(0, 0);
 }
 
 .barber-name {
+    margin-top: 30px;
     margin-bottom: 8px;
     line-height: 25px;
     text-align: center;
