@@ -9,33 +9,50 @@ p {
     margin-bottom: 0;
 }
 
-.ticket {
-    width: 270px;
-    outline: 1px solid red;
-    margin: 20px auto;
-    text-align: center;
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.test::before {
-    content: '';
-    width: 100%;
-    height: 360px;
-    margin-bottom: 20px;
-    background-image: url(../img/rectangle25.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
+img{
     display: block;
 }
 
-.lol{
-    display: flex;
-    align-items: center;
+.ticket {
+    width: 370px;
+    outline: 1px solid red;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.lol::before{
-    content: '';
-    width: 60px;
-    height: 1px;
-    background-color: red;
-    margin-right: 20px;
+.thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.thumb::after {
+    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi deleniti temporibus ut modi repellat doloribus officiis? Incidunt aspernatur temporibus ab animi tempore aliquid inventore provident placeat omnis voluptatem, quod maiores ! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente accusamus, corporis numquam aut voluptatem dolor ea ipsam eos adipisci similique recusandae nobis. Voluptatibus amet eius quibusdam possimus optio vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ipsam? Ad consequuntur corporis quod incidunt, soluta id recusandae ipsam impedit totam,vel aliquam sapiente adipisci architecto quos nobis cumque dolore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi deleniti temporibus ut modi repellat doloribus officiis? Incidunt aspernatur temporibus ab animi tempore aliquid inventore provident placeat omnis voluptatem, quod maiores ! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente accusamus, corporis numquam aut voluptatem dolor ea ipsam eos adipisci similique recusandae nobis. Voluptatibus amet eius quibusdam possimus optio vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ipsam? Ad consequuntur corporis quod incidunt, soluta id recusandae ipsam impedit totam,vel aliquam sapiente adipisci architecto quos nobis cumque dolore?';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 100%);
+    height: 100%;
+    padding: 15px;
+    text-align: justify;
+    overflow: auto;
+    background-color: rgba(157, 164, 189, 0.5);
+    color: #fff;
+    transition: 500ms;
+}
+
+.thumb:hover::after{
+    transform: translate(0, 0);
+}
+
+.text {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

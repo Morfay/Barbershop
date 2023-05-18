@@ -85,7 +85,7 @@
                         with
                         clients.
                         Therefore, we are always ready to improve everyone who comes to us!</p>
-                    <button type="button" class="about">ONLINE-BOOKING</button>
+                    <button type="button" class="about" data-open-modal>ONLINE-BOOKING</button>
                 </div>
             </div>
         </article>
@@ -125,7 +125,7 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="services">ONLINE-BOOKING</button>
+                <button type="button" class="services" data-open-modal>ONLINE-BOOKING</button>
             </div>
         </section>
 
@@ -167,6 +167,18 @@
                         <div class="thumb">
                             <img class="barber-photo" src="./img/john_smith.jpg" alt="John Smith" width="370"
                                 height="346px">
+                            <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim soluta
+                                sed ad, quod
+                                exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
+                                at officia adipisci tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Enim soluta sed ad, quod exercitationem dolor
+                                perferendis nulla alias voluptas laudantium eaque commodi amet at officia adipisci
+                                tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Enim soluta sed ad, quod exercitationem dolor perferendis nulla alias voluptas
+                                laudantium eaque commodi amet at officia adipisci tempore sapiente nemo dolorum. Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Qui voluptas minus doloribus
+                                repudiandae dignissimos itaque quisquam voluptates sed voluptatum eveniet, saepe
+                                asperiores architecto nihil nostrum ducimus illum assumenda quasi nisi.</p>
                         </div>
                         <h3 class="sub-title barber-name">John Smith</h3>
                         <p class="sub-title barber-spec">Extreme Barber</p>
@@ -202,6 +214,18 @@
                         <div class="thumb">
                             <img class="barber-photo" src="./img/michele_doe.jpg" alt="Michele Doe" width="370"
                                 height="346px">
+                            <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
+                                soluta sed ad, quod
+                                exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
+                                at officia adipisci tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Enim soluta sed ad, quod exercitationem dolor
+                                perferendis nulla alias voluptas laudantium eaque commodi amet at officia adipisci
+                                tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Enim soluta sed ad, quod exercitationem dolor perferendis nulla alias voluptas
+                                laudantium eaque commodi amet at officia adipisci tempore sapiente nemo dolorum. Lorem,
+                                ipsum dolor sit amet consectetur adipisicing elit. Quas, veniam, sint iure facere
+                                molestias asperiores sunt in nihil doloremque delectus enim quod labore dolores vero
+                                cupiditate. Esse aliquid doloribus saepe.</p>
                         </div>
                         <h3 class="sub-title barber-name">Michele Doe</h3>
                         <p class="sub-title barber-spec">Extreme Barber</p>
@@ -237,6 +261,18 @@
                         <div class="thumb">
                             <img class="barber-photo" src="./img/alan_black.jpg" alt="Alan Black" width="370"
                                 height="346px">
+                            <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
+                                soluta sed ad, quod
+                                exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
+                                at officia adipisci tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Enim soluta sed ad, quod exercitationem dolor
+                                perferendis nulla alias voluptas laudantium eaque commodi amet at officia adipisci
+                                tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Enim soluta sed ad, quod exercitationem dolor perferendis nulla alias voluptas
+                                laudantium eaque commodi amet at officia adipisci tempore sapiente nemo dolorum. Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Officiis reiciendis, aspernatur
+                                possimus adipisci repudiandae sunt rerum consectetur. Blanditiis quaerat itaque
+                                perspiciatis obcaecati cum illo eaque tempora aliquam accusantium. Maxime, error?</p>
                         </div>
                         <h3 class="sub-title barber-name">Alan Black</h3>
                         <p class="sub-title barber-spec">Extreme Barber</p>
@@ -354,6 +390,7 @@
         </div>
     </footer>
 
+
     <script>
         const {
             height: pageHeaderHeight
@@ -366,12 +403,17 @@
 
     <script>
         const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
+            openModalBtns: document.querySelectorAll("[data-open-modal]"),
             closeModalBtn: document.querySelector("[data-close-modal]"),
             backdrop: document.querySelector("[data-backdrop]"),
         };
 
-        refs.openModalBtn.addEventListener("click", toggleModal);
+        console.log(refs.openModalBtns);
+
+        refs.openModalBtns.forEach(btn => {
+            btn.addEventListener("click", toggleModal);
+        });
+
         refs.closeModalBtn.addEventListener("click", toggleModal);
 
         refs.backdrop.addEventListener("click", logBackdropClick);
@@ -381,7 +423,7 @@
         }
 
         function logBackdropClick() {
-            console.log("It's click on beckdrop");
+            console.log("Open backdrop");
         }
     </script>
 
