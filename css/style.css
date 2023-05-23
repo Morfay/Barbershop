@@ -578,7 +578,7 @@ button.services {
     overflow: auto;
 }
 
-.list-item-barbers:hover .thumb-text {
+.thumb:hover .thumb-text {
     transform: translateY(0);
 }
 
