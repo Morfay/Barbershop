@@ -1,3 +1,14 @@
+body {
+    padding: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
 h1,
 h2,
 h3,
@@ -24,18 +35,66 @@ a {
     text-decoration: none;
 }
 
+button {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 12px 0;
+    min-width: 160px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ff6c00;
+    border-radius: 25px;
+    transition: 250ms linear;
+}
+
+button:hover {
+    background-color: #ff6c00;
+    color: #ffffff;
+}
+
+select {
+    outline: none;
+    background-color: transparent;
+}
+
+input {
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.radio {
+    appearance: none;
+    position: absolute;
+}
+
+.sub-title {
+    color: rgba(157, 164, 189, 0.5);
+}
+
 .list {
     display: flex;
     justify-content: center;
     gap: 20px;
-    outline: 1px solid red;
-    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.list-item{
+.list-item {
     position: relative;
-    padding: 20px;
-    outline: 1px solid red;
+    padding: 10px;
 }
 
 .link::after {
@@ -51,44 +110,265 @@ a {
     transition: transform 300ms;
 }
 
-.list-item:hover .link::after{
-   transform: scaleX(1);
+.list-item:hover .link::after {
+    transform: scaleX(1);
 }
 
-.ticket {
-    width: 370px;
-    outline: 1px solid red;
-    margin: 20px auto;
-    text-align: center;
-    border-radius: 20px;
-    overflow: hidden;
+.js-speaker-form {
+    -webkit-box-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 100px auto;
+    padding: 24px;
+    width: 500px;
+    background-color: #191C26;
+    border-radius: 10px;
 }
 
-.thumb {
+.form-title {
+    margin: 0 auto 20px auto;
+}
+
+.from-group {
+    padding: 10px 0;
+    border: none;
+}
+
+.from-group.input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input {
     position: relative;
-    overflow: hidden;
+    height: 50px;
+    padding-top: 20px;
 }
 
-.thumb::after {
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi deleniti temporibus ut modi repellat doloribus officiis? Incidunt aspernatur temporibus ab animi tempore aliquid inventore provident placeat omnis voluptatem, quod maiores ! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente accusamus, corporis numquam aut voluptatem dolor ea ipsam eos adipisci similique recusandae nobis. Voluptatibus amet eius quibusdam possimus optio vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ipsam? Ad consequuntur corporis quod incidunt, soluta id recusandae ipsam impedit totam,vel aliquam sapiente adipisci architecto quos nobis cumque dolore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi deleniti temporibus ut modi repellat doloribus officiis? Incidunt aspernatur temporibus ab animi tempore aliquid inventore provident placeat omnis voluptatem, quod maiores ! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente accusamus, corporis numquam aut voluptatem dolor ea ipsam eos adipisci similique recusandae nobis. Voluptatibus amet eius quibusdam possimus optio vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ipsam? Ad consequuntur corporis quod incidunt, soluta id recusandae ipsam impedit totam,vel aliquam sapiente adipisci architecto quos nobis cumque dolore?';
+.input-info {
+    width: 100%;
+    height: 30px;
+    border-style: hidden;
+}
+
+.sub-title.input {
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translate(0, 100%);
-    height: 100%;
-    padding: 15px;
-    text-align: justify;
-    overflow: auto;
+    transition: color 250ms linear;
+}
+
+.input-info:not(:placeholder-shown)+.sub-title,
+.input-info:focus+.sub-title {
+    color: #ffffff
+}
+
+.input-field::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    display: block;
     background-color: rgba(157, 164, 189, 0.5);
-    color: #fff;
-    transition: 500ms;
 }
 
-.thumb:hover::after {
-    transform: translate(0, 0);
+.input-info::placeholder {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.5);
 }
 
-.text {
-    margin-top: 30px;
-    margin-bottom: 30px;
+.centered {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.hair-checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(157, 164, 189, 0.5);
+    border-radius: 2px;
+    transition: 250ms linear;
+}
+
+.check {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    scale: 0;
+    transition: scale 250ms linear;
+}
+
+.checkbox:checked~.check {
+    scale: 1;
+}
+
+.checkbox:checked+.icon {
+    border: 1px solid transparent;
+    background-color: #ffffff;
+}
+
+.hair-style {
+    color: rgba(157, 164, 189, 0.5);
+    transition: color 250ms linear;
+}
+
+.checkbox:checked~.hair-style {
+    color: #ffffff;
+}
+
+.sex-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sex-item {
+    display: flex;
+}
+
+.sex {
+    color: rgba(157, 164, 189, 0.5);
+    transition: color 250ms linear;
+}
+
+.label-radio {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+}
+
+.radio-icon {
+    display: inline-block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(157, 164, 189, 0.5);
+    border-radius: 50%;
+    transition: border 250ms linear;
+}
+
+.radio-icon-inside {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #9da4bd;
+    scale: 0;
+    transition: scale 250ms linear;
+}
+
+.radio:checked+.radio-icon {
+    border: 1px solid #ffffff;
+}
+
+.radio:checked~.radio-icon-inside {
+    scale: 1;
+    background-color: #ffffff;
+}
+
+.radio:checked~.sex {
+    color: #ffffff;
+}
+
+.data-file {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data,
+.file {
+    width: calc(50% - 20px);
+}
+
+.time {
+    width: 100%;
+    border: 1px solid rgba(157, 164, 189, 0.5);
+    border-radius: 4px;
+    padding: 1px;
+    color: rgba(157, 164, 189, 0.5);
+}
+
+.upload {
+    display: inline-block;
+    width: 100%;
+}
+
+.drop-down {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    border-color: rgba(157, 164, 189, 0.4);
+    color: #ffffff;
+    border-radius: 10px;
+
+}
+
+.message {
+    height: 70px;
+    width: 100%;
+    resize: none;
+    border: hidden;
+    background-color: transparent;
+    outline: none;
+    color: #ffffff;
+}
+
+.from-group.message-container {
+    margin-bottom: 10px;
+}
+
+.message-label::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: rgba(157, 164, 189, 0.5);
+}
+
+.message::placeholder {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.5);
+}
+
+.btn {
+    margin: 0 auto;
 }
