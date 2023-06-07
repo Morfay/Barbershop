@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbershop</title>
-    <link rel="icon" href="/favicon.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -330,15 +329,32 @@
 
         <section class="section booking">
             <div class="container booking">
-                <div class="booking-form">
+                <form class="booking-form">
                     <h2 class="title booking">Online-booking</h2>
                     <div class="name-tel">
-                        <div class="input"><input type="text" placeholder="NAME*"></div>
-                        <div class="input"><input type="tel" name="Telephone" id="1" placeholder="PHONE*"></div>
+                        <label class="input-label">
+                            <div class="input-container">
+                                <input class="input" type="text" name="name" id="name" placeholder="NAME*">
+                                <span></span>
+                            </div>
+                        </label>
+                        <label class="input-label">
+                            <div class="input-container">
+                                <input class="input" type="tel" name="phone" id="phone" placeholder="PHONE*">
+                                <span></span>
+                            </div>
+                        </label>
                     </div>
-                    <div class="message"><input type="text" placeholder="MESSAGE"></div>
-                    <button type="button">SEND</button>
-                </div>
+                    <div class="message">
+                        <label>
+                            <div class="input-container">
+                                <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
+                                <span></span>
+                            </div>
+                        </label>
+                    </div>
+                    <button type="submit">SEND</button>
+                </form>
                 <div class="contacts">
                     <h2 class="title booking">Contacts</h2>
                     <address>
@@ -390,13 +406,32 @@
     <div class="backdrop is-hidden" data-backdrop>
         <div class="modal">
             <div class="booking-form modal">
-                <h2 class="title booking">Online-booking</h2>
-                <div class="name-tel">
-                    <div class="input"><input type="text" placeholder="NAME*"></div>
-                    <div class="input"><input type="tel" name="Telephone" id="1" placeholder="PHONE*"></div>
-                </div>
-                <div class="message"><input type="text" placeholder="MESSAGE"></div>
-                <button type="button">SEND</button>
+                <form>
+                    <h2 class="title booking">Online-booking</h2>
+                    <div class="name-tel">
+                        <label class="input-label">
+                            <div class="input-container">
+                                <input class="input" type="text" name="name" id="name" placeholder="NAME*">
+                                <span></span>
+                            </div>
+                        </label>
+                        <label class="input-label">
+                            <div class="input-container">
+                                <input class="input" type="tel" name="phone" id="phone" placeholder="PHONE*">
+                                <span></span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="message">
+                        <label>
+                            <div class="input-container">
+                                <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
+                                <span></span>
+                            </div>
+                        </label>
+                    </div>
+                    <button type="submit">SEND</button>
+                </form>
             </div>
             <button class="close-button" type="button" data-close-modal>
                 <svg class="icon-close" width="15px" height="15px">
