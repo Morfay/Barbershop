@@ -75,6 +75,7 @@ select {
 input {
     outline: none;
     background-color: transparent;
+    border-style: hidden;
     color: #ffffff;
 }
 
@@ -165,7 +166,8 @@ input {
 .input-info {
     width: 100%;
     height: 30px;
-    border-style: hidden;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.5);
+    transition: border-bottom 250ms linear;
 }
 
 .sub-title.input {
@@ -176,15 +178,12 @@ input {
 
 .input-info:not(:placeholder-shown)+.sub-title,
 .input-info:focus+.sub-title {
-    color: #ffffff
+    color: #ffffff;
 }
 
-.input-field::after {
-    content: '';
-    height: 1px;
-    width: 100%;
-    display: block;
-    background-color: rgba(157, 164, 189, 0.5);
+.input-info:focus,
+.input-info:not(:placeholder-shown) {
+    border-bottom: 1px solid #ffffff;
 }
 
 .input-info::placeholder {
@@ -196,6 +195,11 @@ input {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.5);
+    transition: color 250ms linear;
+}
+
+.input-info:focus::placeholder{
+    color: #ffffff;
 }
 
 .centered {
@@ -210,11 +214,26 @@ input {
     gap: 50px;
 }
 
-.hair-checkbox {
+.checkbox-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     gap: 5px;
+}
+
+.icon-check {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 12px;
+    height: 12px;
+    scale: 0;
+    fill: #9da4bd;
+    transition: scale 250ms linear;
+}
+
+.checkbox:checked~.icon-check {
+    scale: 1;
 }
 
 .icon {
@@ -226,18 +245,6 @@ input {
     border: 1px solid rgba(157, 164, 189, 0.5);
     border-radius: 2px;
     transition: 250ms linear;
-}
-
-.check {
-    position: absolute;
-    top: 2px;
-    left: 1px;
-    scale: 0;
-    transition: scale 250ms linear;
-}
-
-.checkbox:checked~.check {
-    scale: 1;
 }
 
 .checkbox:checked+.icon {
@@ -349,22 +356,25 @@ input {
     height: 70px;
     width: 100%;
     resize: none;
-    border: hidden;
+    border-style: hidden;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.5);
     background-color: transparent;
     outline: none;
+    color: #ffffff;
+    transition: border-bottom 250ms linear;
+}
+
+.message:focus,
+.message:not(:placeholder-shown){
+    border-bottom: 1px solid #ffffff;
+}
+
+.message:focus::placeholder{
     color: #ffffff;
 }
 
 .from-group.message-container {
     margin-bottom: 10px;
-}
-
-.message-label::after {
-    content: '';
-    height: 1px;
-    width: 100%;
-    display: block;
-    background-color: rgba(157, 164, 189, 0.5);
 }
 
 .message::placeholder {
@@ -376,6 +386,7 @@ input {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.5);
+    transition: color 250ms linear;
 }
 
 .btn {

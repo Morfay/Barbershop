@@ -191,9 +191,6 @@ body {
 .page-header {
     position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
-    background-color: transparent;
     padding: 32px 0;
     z-index: 1;
 }
@@ -329,25 +326,16 @@ body {
     line-height: 15px;
     letter-spacing: 0.1em;
     text-transform: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+    border-radius: 0px;
     color: rgba(157, 164, 189, 0.6);
+    transition: color 250ms linear, border-bottom 250ms linear;
 }
 
 .button-slider:hover {
     color: #ffffff;
+    border-bottom: 1px solid #ffffff;
     background-color: transparent;
-}
-
-.button-slider::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(157, 164, 189, 0.6);
-    transition: 250ms linear;
-}
-
-.button-slider:hover::after {
-    background-color: #fff;
 }
 
 .back {
@@ -712,11 +700,13 @@ input {
     line-height: 15px;
     letter-spacing: 0.1em;
     background-color: transparent;
-    border-color: transparent;
+    border-style: hidden;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
     outline: none;
     width: 100%;
     padding: 0 0 8px 0;
     color: #ffffff;
+    transition: border-bottom 250ms linear;
 }
 
 .name-tel {
@@ -738,24 +728,9 @@ input {
     color: #ffffff;
 }
 
-.input:focus+span::after,
-.input:not(:placeholder-shown)+span::after {
-    background-color: #ffffff;
-}
-
-.input-container {
-    position: relative;
-}
-
-.input-container>span::after {
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: rgba(157, 164, 189, 0.6);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: background-color 250ms linear;
+.input:focus,
+.input:not(:placeholder-shown) {
+    border-bottom: 1px solid #ffffff;
 }
 
 .message {
@@ -769,17 +744,19 @@ textarea {
     letter-spacing: 0.1em;
     resize: none;
     background-color: transparent;
-    border-color: transparent;
+    border-style: hidden;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
     outline: none;
     width: 100%;
     height: 76px;
     padding: 0;
     color: #ffffff;
+    transition: border-bottom 250ms linear;
 }
 
-textarea:focus+span::after,
-textarea:not(:placeholder-shown)+span::after {
-    background-color: #ffffff;
+textarea:focus,
+textarea:not(:placeholder-shown) {
+    border-bottom: 1px solid #ffffff;
 }
 
 textarea::placeholder {
@@ -805,9 +782,14 @@ textarea:focus::placeholder {
 }
 
 .list-item-contacts {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.sub-title.address:hover+.icon-contacts,
+.sub-title.contacts-phone:hover+.icon-contacts,
+.sub-title.contacts-mail:hover+.icon-contacts {
+    stroke: var(--orange-color);
 }
 
 .list-item-contacts:last-child {
@@ -828,8 +810,13 @@ textarea:focus::placeholder {
 }
 
 .icon-contacts {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    stroke: #9da4bd;
     width: 24px;
     height: 24px;
+    transition: stroke 250ms linear;
 }
 
 /* Footer */

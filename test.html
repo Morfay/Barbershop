@@ -48,50 +48,68 @@
             </div>
 
             <label class="hair-checkbox">
-                <input class="checkbox" type="checkbox" name="services" id="crop">
-                <span class="icon"></span>
-                <img class="check" src="./check.svg" width="12px" height="12px">
-                <span class="hair-style">I accept the privacy policy</span>
+                <div class="checkbox-wrapper">
+                    <input class="checkbox" type="checkbox" name="privacy" value="accepted">
+                    <span class="icon"></span>
+                    <svg class="icon-check">
+                        <use href="./img/sprite.svg#icon-check"></use>
+                    </svg>
+                    <span class="hair-style">I accept the privacy policy</span>
+                </div>
             </label>
 
         </div>
 
+        <!-- Chechbox -->
         <div class="from-group">
             <h2 class="sub-title centered">Services</h2>
             <ul class="services">
                 <li class="services-item">
                     <label class="hair-checkbox">
-                        <input class="checkbox" type="checkbox" name="services" id="crop">
-                        <span class="icon"></span>
-                        <img class="check" src="./check.svg" width="12px" height="12px">
-                        <span class="hair-style">Crop</span>
+                        <div class="checkbox-wrapper">
+                            <input class="checkbox" type="checkbox" name="services" value="Crop">
+                            <span class="icon"></span>
+                            <svg class="icon-check">
+                                <use href="./img/sprite.svg#icon-check"></use>
+                            </svg>
+                            <span class="hair-style">Crop</span>
+                        </div>
                     </label>
                 </li>
                 <li class="services-item">
                     <label class="hair-checkbox">
-                        <input class="checkbox" type="checkbox" name="services" id="Fade">
-                        <span class="icon"></span>
-                        <img class="check" src="./check.svg" width="12px" height="12px">
-                        <span class="hair-style">Fade</span>
+                        <div class="checkbox-wrapper">
+                            <input class="checkbox" type="checkbox" name="services" value="Fade">
+                            <span class="icon"></span>
+                            <svg class="icon-check">
+                                <use href="./img/sprite.svg#icon-check"></use>
+                            </svg>
+                            <span class="hair-style">Fade</span>
+                        </div>
                     </label>
                 </li>
                 <li class="services-item">
                     <label class="hair-checkbox">
-                        <input class="checkbox" type="checkbox" name="services" id="Complex">
-                        <span class="icon"></span>
-                        <img class="check" src="./check.svg" width="12px" height="12px">
-                        <span class="hair-style">Complex</span>
+                        <div class="checkbox-wrapper">
+                            <input class="checkbox" type="checkbox" name="services" value="Complex">
+                            <span class="icon"></span>
+                            <svg class="icon-check">
+                                <use href="./img/sprite.svg#icon-check"></use>
+                            </svg>
+                            <span class="hair-style">Complex</span>
+                        </div>
                     </label>
                 </li>
             </ul>
         </div>
 
+        <!-- Radiobutton -->
         <div class="from-group">
             <h2 class="sub-title centered">Your sex</h2>
             <ul class="sex-list">
                 <li class="sex-item">
                     <label class="label-radio">
-                        <input class="radio" type="radio" name="sex" value="male" id="male">
+                        <input class="radio" type="radio" name="sex" value="male">
                         <span class="radio-icon"></span>
                         <span class="radio-icon-inside"></span>
                         <span class="sex">Male</span>
@@ -99,7 +117,7 @@
                 </li>
                 <li class="sex-item">
                     <label class="label-radio">
-                        <input class="radio" type="radio" name="sex" value="female" id="female">
+                        <input class="radio" type="radio" name="sex" value="female">
                         <span class="radio-icon"></span>
                         <span class="radio-icon-inside"></span>
                         <span class="sex">Female</span>
@@ -107,7 +125,7 @@
                 </li>
                 <li class="sex-item">
                     <label class="label-radio">
-                        <input class="radio" type="radio" name="sex" value="child" id="child">
+                        <input class="radio" type="radio" name="sex" value="child">
                         <span class="radio-icon"></span>
                         <span class="radio-icon-inside"></span>
                         <span class="sex">Child</span>
@@ -115,7 +133,7 @@
                 </li>
                 <li class="sex-item">
                     <label class="label-radio">
-                        <input class="radio" type="radio" name="sex" value="other" id="other">
+                        <input class="radio" type="radio" name="sex" value="other">
                         <span class="radio-icon"></span>
                         <span class="radio-icon-inside"></span>
                         <span class="sex">Other</span>
@@ -128,7 +146,7 @@
             <div class="data">
                 <label class="half-size">
                     <h2 class="sub-title centered">Data & Time</h2>
-                    <input class="time" type="datetime-local" name="" id="data">
+                    <input class="time" type="datetime-local" name="data-time" id="data">
                 </label>
             </div>
 
@@ -155,7 +173,7 @@
         <div class="from-group message-container">
             <label class="message-label">
                 <h2 class="sub-title centered">Message</h2>
-                <textarea class="message" name="message" id="message" placeholder="Message"></textarea>
+                <textarea class="message" name="message" placeholder="Message"></textarea>
             </label>
 
         </div>
