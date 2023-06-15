@@ -1,0 +1,32 @@
+.footer {
+  padding: 46px 0;
+  background: #f7f7f7;
+}
+
+.container--footer {
+  display: flex;
+  align-items: center;
+}
+
+.copy {
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+  text-transform: none;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.some-footer {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 40px;
+  color: var(--secondary-text-color);
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+}

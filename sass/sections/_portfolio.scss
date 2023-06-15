@@ -1,0 +1,13 @@
+.sup-title--portfolio {
+    margin-bottom: 44px;
+    color: var(--secondary-text-color);
+}
+
+.portfolio {
+    display: flex;
+    gap: 30px;
+}
+
+.portfolio__item {
+    width: calc((100% - 90px)/3);
+}

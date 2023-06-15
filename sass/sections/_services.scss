@@ -1,0 +1,63 @@
+.section--services {
+  background-image: url(../img/services_and_prices.webp);
+  background-color: #111319;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sup-title--services {
+  margin-bottom: 20px;
+}
+
+.title--services {
+  margin-bottom: 44px;
+  color: var(--priority-title-color);
+}
+
+.container-prices {
+  display: flex;
+  margin-bottom: 44px;
+  gap: 30px;
+}
+
+.list__prices {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 30px) / 2);
+  padding: 30px 22px;
+  row-gap: 20px;
+
+  &--left {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+
+  &--right {
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
+}
+
+.list__prices__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+
+  &::before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    padding-left: 12px;
+    background-color: currentColor;
+    flex-grow: 1;
+  }
+
+  & > p {
+    order: -1;
+  }
+}
+
+.button--services {
+  display: block;
+  margin: 0 auto;
+}
