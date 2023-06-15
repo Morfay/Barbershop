@@ -1,0 +1,155 @@
+.booking {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  background-color: #191c26;
+  background-image: url(../img/contact_bg.webp);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: right;
+}
+
+.container--booking {
+  display: flex;
+  padding-right: 10px;
+}
+
+.booking-form {
+  width: 50%;
+  padding-right: 10px;
+}
+
+.title--booking {
+  margin-bottom: 40px;
+  color: var(--priority-title-color);
+}
+
+input {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  border-style: hidden;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+  width: 100%;
+  padding: 0 0 8px 0;
+  color: #ffffff;
+  transition: border-bottom 250ms linear;
+
+  &::placeholder {
+    color: rgba(157, 164, 189, 0.4);
+    transition: color 250ms linear;
+  }
+
+  &:focus::placeholder {
+    color: #ffffff;
+  }
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+.name-tel {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
+}
+
+.input-label {
+  width: calc((100% - 30px) / 2);
+}
+
+.message {
+  margin-bottom: 44px;
+}
+
+textarea {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  resize: none;
+  background-color: transparent;
+  border-style: hidden;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+  width: 100%;
+  height: 76px;
+  padding: 0;
+  color: #ffffff;
+  transition: border-bottom 250ms linear;
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-bottom: 1px solid #ffffff;
+  }
+
+  &::placeholder {
+    color: rgba(157, 164, 189, 0.4);
+    transition: color 250ms linear;
+  }
+
+  &:focus::placeholder {
+    color: #ffffff;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding-left: 105px;
+  width: 50%;
+}
+
+.list-contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.list-item-contacts {
+  position: relative;
+  padding-left: 40px;
+
+  &:last-child {
+    margin-bottom: 70px;
+  }
+}
+
+.icon-contacts {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  stroke: #9da4bd;
+  width: 24px;
+  height: 24px;
+  transition: stroke 250ms linear;
+}
+
+.address {
+  font-weight: 700;
+
+  &:hover + .icon-contacts {
+    stroke: var(--orange-color);
+  }
+}
+
+.mail {
+  text-decoration: underline;
+
+  &:hover + .icon-contacts {
+    stroke: var(--orange-color);
+  }
+}
+
+.phone:hover + .icon-contacts {
+  stroke: var(--orange-color);
+}
+
+.working {
+  margin-bottom: 20px;
+  color: var(--priority-title-color);
+}

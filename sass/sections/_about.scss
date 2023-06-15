@@ -1,0 +1,36 @@
+.about {
+  display: flex;
+}
+
+.list-item-about {
+  margin-right: 30px;
+}
+
+.about__content {
+  width: 470px;
+}
+
+.sup-title--about,
+.title--about,
+.sub-title--about {
+  margin-bottom: 20px;
+}
+
+.sup-title--about {
+  color: var(--secondary-text-color);
+}
+
+.sub-title--about {
+  color: var(--text-fill-color);
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--text-fill-color);
+  margin-bottom: 42px;
+}
+
+.button--about {
+  color: var(--secondary-text-color);
+}
