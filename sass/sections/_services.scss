@@ -13,12 +13,21 @@
 .title--services {
   margin-bottom: 44px;
   color: var(--priority-title-color);
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: normal;
+  }
 }
 
 .container-prices {
   display: flex;
   margin-bottom: 44px;
   gap: 30px;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
 .list__prices {
@@ -28,12 +37,32 @@
   padding: 30px 22px;
   row-gap: 20px;
 
-  &--left {
+  &--left,
+  &--modile {
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
   }
 
   &--right {
     background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
+
+  @media screen and (max-width: 1170px) {
+    display: none;
+  }
+}
+
+.list__prices.list__prices--mobile {
+  @media screen and (max-width: 1170px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 10px;
+    row-gap: 20px;
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+
+  @media screen and (min-width: 1170px) {
+    display: none;
   }
 }
 
@@ -45,7 +74,7 @@
 
   &::before {
     content: "";
-    width: 100px;
+    width: 2px;
     height: 1px;
     padding-left: 12px;
     background-color: currentColor;
@@ -60,4 +89,12 @@
 .button--services {
   display: block;
   margin: 0 auto;
+}
+
+.list__prices__item.sub-title {
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+  }
 }

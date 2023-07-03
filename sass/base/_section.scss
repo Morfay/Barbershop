@@ -1,3 +1,7 @@
 .section {
   padding: 120px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 50px 20px;
+  }
 }

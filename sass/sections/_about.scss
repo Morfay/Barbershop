@@ -1,13 +1,29 @@
 .about {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
-.list-item-about {
+.about_photo {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.about_photo_item {
   margin-right: 30px;
 }
 
 .about__content {
   width: 470px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .sup-title--about,
@@ -20,8 +36,24 @@
   color: var(--secondary-text-color);
 }
 
+.title--about {
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.4px;
+  }
+}
+
 .sub-title--about {
   color: var(--text-fill-color);
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    letter-spacing: 0.32px;
+  }
 }
 
 .about-text {

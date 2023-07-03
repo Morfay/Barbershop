@@ -6,16 +6,33 @@
   background-repeat: no-repeat;
   background-size: 50% 100%;
   background-position: right;
+
+  @media screen and (max-width: 767px) {
+    background-image: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .container--booking {
   display: flex;
   padding-right: 10px;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    padding: 0;
+  }
 }
 
 .booking-form {
   width: 50%;
   padding-right: 10px;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .title--booking {
@@ -56,10 +73,18 @@ input {
   display: flex;
   gap: 30px;
   margin-bottom: 44px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .input-label {
   width: calc((100% - 30px) / 2);
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .message {
@@ -102,6 +127,15 @@ textarea {
   flex-direction: column;
   padding-left: 105px;
   width: 50%;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-image: url(../img/contact_bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .list-contacts {

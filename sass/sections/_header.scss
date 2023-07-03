@@ -3,15 +3,50 @@
   width: 100%;
   padding: 32px 0;
   z-index: 1;
+  background-color: transparent;
+
+  @media screen and (max-width: 767px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .header {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
 .logo {
   width: 69px;
   height: 56px;
+  display: block;
+
+  @media screen and (max-width: 767px) {
+    fill: #ffffff;
+  }
+}
+
+.header_nav {
+  display: flex;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    width: 66%;
+    height: 900px;
+    background-color: #ffffff;
+    padding: 48px 30px 0 40px;
+    outline: 1px solid red;
+    transition: transform 250ms linear;
+  }
+}
+
+.header_nav.is-open {
   display: block;
 }
 
@@ -19,11 +54,35 @@
   display: flex;
   margin-left: 130px;
   gap: 30px;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin: 0 0 64px 0;
+  }
+}
+
+.some-in-menu {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-top: 70px;
+  }
+}
+
+.some-in-menu-item {
+  padding: 12px 0;
+  color: var(--secondary-text-color);
 }
 
 .link-menu {
   padding: 20px 0;
   position: relative;
+
+  @media screen and (max-width: 767px) {
+    padding: 12px 0;
+    color: var(--secondary-text-color);
+  }
 
   &::after {
     content: "";
@@ -48,10 +107,65 @@
   align-items: center;
   margin-left: auto;
   margin-right: 20px;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
 .phone-header {
   padding: 20px 0;
   margin-right: 44px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    color: var(--secondary-text-color);
+  }
+}
+
+.button--booking {
+  @media screen and (max-width: 767px) {
+    color: var(--secondary-text-color);
+  }
+}
+
+.button_menu {
+  display: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 0;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &--open {
+    @media screen and (max-width: 767px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      transform: translateY(100%);
+    }
+  }
+
+  &--close {
+    @media screen and (max-width: 767px) {
+      display: block;
+      margin-left: auto;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.icon_menu {
+  &--open {
+    fill: #ffffff;
+  }
+
+  &--close {
+    fill: #000000;
+  }
 }

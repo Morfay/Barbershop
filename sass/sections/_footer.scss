@@ -1,11 +1,19 @@
 .footer {
   padding: 46px 0;
   background: #f7f7f7;
+
+  @media screen and (max-width: 767px) {
+    padding: 20px 0;
+  }
 }
 
 .container--footer {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
 .copy {
@@ -14,6 +22,10 @@
   text-transform: none;
   font-size: 11px;
   line-height: 15px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .some-footer {
@@ -28,5 +40,13 @@
     width: 60px;
     height: 1px;
     background-color: currentColor;
+
+    @media screen and (max-width: 767px){
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
   }
 }

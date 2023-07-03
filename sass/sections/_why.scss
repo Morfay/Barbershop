@@ -3,14 +3,25 @@
   flex-direction: row;
   padding-left: 70px;
   gap: 130px;
+
+  @media screen and (max-width: 1170px) {
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 44px;
+  }
 }
 
 .list__why {
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
-  width: 370px;
+  max-width: 370px;
   color: var(--secondary-text-color);
+
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+    justify-content: space-between;
+  }
 }
 
 .list__item__why {
@@ -28,9 +39,18 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 
+  @media screen and (max-width: 767px) {
+    width: 150px;
+  }
+
   &:nth-child(even) {
     margin-top: 35px;
     margin-left: 30px;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+      margin-left: 20px;
+    }
   }
 }
 
