@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+    <main>
+        <header class="page-header" data-aos="fade-down">
+            <div class="container header">
+                <a href="./index.html">
+                    <svg class="logo" width="69px" height="56px">
+                        <use href="./img/sprite.svg#icon-logo"></use>
+                    </svg>
+                </a>
+
+                <button class="button_menu button_menu--open" type="button" data-menu-button>
+                    <svg class="icon_menu--open" width="40px" height="40px">
+                        <use href="./img/sprite.svg#icon-menu"></use>
+                    </svg>
+                </button>
+
+                <div class="header_nav" data-menu>
+                    <button class="button_menu button_menu--close" type="button" data-menu-button>
+                        <svg class="icon_menu icon_menu--close" width="40px" height="40px">
+                            <use href="./img/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                    <nav>
+                        <ul class="menu">
+                            <li class="list-item-menu"><a class="link-menu" href="">About</a></li>
+                            <li class="list-item-menu"><a class="link-menu" href="./test.html">Services and
+                                    prices</a></li>
+                            <li class="list-item-menu"><a class="link-menu" href="">Barbers</a></li>
+                            <li class="list-item-menu"><a class="link-menu" href="">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="menu--right">
+                        <li>
+                            <a class="phone-header" href="tel:+380441111111" title="Telephone">+38 044 111 11 11</a>
+                        </li>
+                        <li>
+                            <button type="button" data-open-modal class="button--booking">ONLINE-BOOKING</button>
+                        </li>
+                    </ul>
+                    <ul class="some-in-menu">
+                        <li>
+                            <a class="some-in-menu-item" href="http://www.instagram.com" target="_blank"
+                                rel="noopener noreferrer">
+                                Instagram</a>
+                        </li>
+
+                        <li>
+                            <a class="some-in-menu-item" href="http://www.youtube.com" target="_blank"
+                                rel="noopener noreferrer">
+                                Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="section--hero" data-aos="fade-down">
+            <div class="container hero">
+                <div class="aside-hero">
+                    <ul class="aside">
+                        <li>
+                            <a class="some" href="http://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                Instagram</a>
+                        </li>
+
+                        <li>
+                            <a class="some" href="http://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero-content">
+                    <p class="sup-title sup-title--hero">A hair salon for men in Kyiv</p>
+                    <h1 class="title title--hero">BarberShop</h1>
+                    <p class="sub-title sub-title--hero">We are experts in trendy men’s haircuts.<br>We work quickly,
+                        carefully
+                        and with
+                        style.</p>
+                    <!-- <div class="hero-slider">
+                        <button type="button" class="button-slider button-slider--back">Back</button>
+                        <button type="button" class="button-slider button-slider--forward">Forward</button>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <article class="section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <div class="container about">
+                <ul class="about_photo">
+                    <li class="about_photo_item"><img src="./img/img1.jpg" alt="Photo" width="270" height="445"></li>
+                    <li class="about_photo_item"><img src="./img/img2.jpg" alt="Photo" width="270"></li>
+                </ul>
+                <div class="about__content">
+                    <p class="sup-title sup-title--about">About</p>
+                    <h2 class="title title--about">Best Barbershop<br> in your city</h2>
+                    <h3 class="sub-title sub-title--about">If you want to add more confidence to your image, you
+                        should
+                        definitely
+                        visit
+                        us.</h3>
+                    <p class="sub-title about-text">We are a team that never stops at what has been achieved and are
+                        thirsty
+                        for
+                        changes. And when you
+                        fall
+                        into the hands
+                        of our master, you will never be the same again. We are a team that is always "on the same wave"
+                        with
+                        clients.
+                        Therefore, we are always ready to improve everyone who comes to us!</p>
+                    <button type="button" class="button--about" data-open-modal>ONLINE-BOOKING</button>
+                </div>
+            </div>
+        </article>
+
+        <section class="section section--services">
+            <div class="container">
+                <p class="sup-title sup-title--services">Spend your time with the best masters</p>
+                <h2 class="title title--services">Services and prices</h2>
+                <div class="container-prices">
+                    <ul class="list__prices list__prices--left">
+                        <li class="list__prices__item sub-title">
+                            <p>Men’s haircut</p><span>from 300 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Beard trim</p><span>from 300 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Mustache trim</p><span>from 200 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Straight razor shave</p><span>from 200 uah.</span>
+                        </li>
+                    </ul>
+
+                    <ul class="list__prices list__prices--right">
+                        <li class="list__prices__item sub-title">
+                            <p>Trainee’s haircut</p><span>from 50 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Haircut under the nozzle</p><span>from 200 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Children’s haircut (0-12 y.o.)</p><span>from 300 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Camouflage of gray hair</p><span>from 200 uah.</span>
+                        </li>
+                    </ul>
+
+                    <ul class="list__prices list__prices--mobile">
+                        <li class="list__prices__item sub-title">
+                            <p>Men’s haircut</p><span>from 300 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Beard trim</p><span>from 300 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Mustache trim</p><span>from 200 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Straight razor shave</p><span>from 200 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Trainee’s haircut</p><span>from 50 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Haircut under the nozzle</p><span>from 200 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Children’s haircut (0-12 y.o.)</p><span>from 300 uah.</span>
+                        </li>
+                        <li class="list__prices__item sub-title">
+                            <p>Camouflage of gray hair</p><span>from 200 uah.</span>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="button--services" data-open-modal>ONLINE-BOOKING</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container why">
+                <ul class="list__why">
+                    <li class="list__item__why">
+                        <span class="number">600</span>
+                        <p class="sub-num">Satisfied customers per day</p>
+                    </li>
+                    <li class="list__item__why">
+                        <span class="number">50</span>
+                        <p class="sub-num">Awards for excellent service</p>
+                    </li>
+                    <li class="list__item__why">
+                        <span class="number">20</span>
+                        <p class="sub-num">Kyiv’s bestbarbers</p>
+                    </li>
+                    <li class="list__item__why">
+                        <span class="number">100</span>
+                        <p class="sub-num">Gifts for regular customers</p>
+                    </li>
+                </ul>
+                <div>
+                    <p class="sup-title sup-title--why">Old traditional school</p>
+                    <h2 class="title title--why">¿Why people come to us?</h2>
+                    <p class="sub-title why__text">Only good things are said about us. But it's better to see and feel 1
+                        time than read 10 times.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section barbers">
+            <div class="container barbers">
+                <p class="sup-title sup-title--barbers">For true enjoyers of the atmosphere</p>
+                <h2 class="title title--barbers">Our barbers</h2>
+                <ul class="list__barbers">
+                    <li class="list__barbers__item">
+                        <div class="thumb">
+                            <img class="barber-photo" src="./img/john_smith.jpg" alt="John Smith" width="370"
+                                height="346px">
+                            <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim soluta
+                                sed ad, quod
+                                exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
+                                at officia adipisci tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Enim soluta sed ad, quod exercitationem dolor
+                                perferendis nulla alias voluptas laudantium eaque commodi amet at officia adipisci
+                                tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Enim soluta sed ad, quod exercitationem dolor perferendis nulla alias voluptas
+                                laudantium eaque commodi amet at officia adipisci tempore sapiente nemo dolorum. Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Qui voluptas minus doloribus
+                                repudiandae dignissimos itaque quisquam voluptates sed voluptatum eveniet, saepe
+                                asperiores architecto nihil nostrum ducimus illum assumenda quasi nisi.</p>
+                        </div>
+                        <h3 class="sub-title barber-name">John Smith</h3>
+                        <p class="sub-title barber-spec">Extreme Barber</p>
+                        <ul class="barber-some">
+                            <li><a class="link-some" href="https://www.instagram.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li><a class="link-some" href="https://www.twitter.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                </a></li>
+                            <li><a class="link-some" href="https://www.facebook.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                </a></li>
+                            <li><a class="link-some" href="https://www.linkedin.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="list__barbers__item">
+                        <div class="thumb">
+                            <img class="barber-photo" src="./img/michele_doe.jpg" alt="Michele Doe" width="370"
+                                height="346px">
+                            <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
+                                soluta sed ad, quod
+                                exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
+                                at officia adipisci tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Enim soluta sed ad, quod exercitationem dolor
+                                perferendis nulla alias voluptas laudantium eaque commodi amet at officia adipisci
+                                tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Enim soluta sed ad, quod exercitationem dolor perferendis nulla alias voluptas
+                                laudantium eaque commodi amet at officia adipisci tempore sapiente nemo dolorum. Lorem,
+                                ipsum dolor sit amet consectetur adipisicing elit. Quas, veniam, sint iure facere
+                                molestias asperiores sunt in nihil doloremque delectus enim quod labore dolores vero
+                                cupiditate. Esse aliquid doloribus saepe.</p>
+                        </div>
+                        <h3 class="sub-title barber-name">Michele Doe</h3>
+                        <p class="sub-title barber-spec">Extreme Barber</p>
+                        <ul class="barber-some">
+                            <li><a class="link-some" href="https://www.instagram.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li><a class="link-some" href="https://www.twitter.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                </a></li>
+                            <li><a class="link-some" href="https://www.facebook.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                </a></li>
+                            <li><a class="link-some" href="https://www.linkedin.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="list__barbers__item">
+                        <div class="thumb">
+                            <img class="barber-photo" src="./img/alan_black.jpg" alt="Alan Black" width="370"
+                                height="346px">
+                            <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
+                                soluta sed ad, quod
+                                exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
+                                at officia adipisci tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Enim soluta sed ad, quod exercitationem dolor
+                                perferendis nulla alias voluptas laudantium eaque commodi amet at officia adipisci
+                                tempore sapiente nemo dolorum. Lorem ipsum, dolor sit amet consectetur adipisicing
+                                elit. Enim soluta sed ad, quod exercitationem dolor perferendis nulla alias voluptas
+                                laudantium eaque commodi amet at officia adipisci tempore sapiente nemo dolorum. Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Officiis reiciendis, aspernatur
+                                possimus adipisci repudiandae sunt rerum consectetur. Blanditiis quaerat itaque
+                                perspiciatis obcaecati cum illo eaque tempora aliquam accusantium. Maxime, error?</p>
+                        </div>
+                        <h3 class="sub-title barber-name">Alan Black</h3>
+                        <p class="sub-title barber-spec">Extreme Barber</p>
+                        <ul class="barber-some">
+                            <li><a class="link-some" href="https://www.instagram.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li><a class="link-some" href="https://www.twitter.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                </a></li>
+                            <li><a class="link-some" href="https://www.facebook.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                </a></li>
+                            <li><a class="link-some" href="https://www.linkedin.com" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <svg class="icon-some" width="20px" height="20px">
+                                        <use href="./img/sprite.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="hide">Portfolio</h2>
+                <p class="sup-title sup-title--portfolio">In Latin, "barba" means "beard"</p>
+                <ul class="portfolio">
+                    <li class="portfolio__item"><img src="./img/rectangle25.jpg" alt="Photo" width="270"></li>
+                    <li class="portfolio__item"><img src="./img/rectangle26.jpg" alt="Photo" width="270"></li>
+                    <li class="portfolio__item"><img src="./img/rectangle27.jpg" alt="Photo" width="270"></li>
+                    <li class="portfolio__item"><img src="./img/rectangle28.jpg" alt="Photo" width="270"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section booking">
+            <div class="container container--booking">
+                <form class="booking-form">
+                    <h2 class="title title--booking">Online-booking</h2>
+                    <div class="name-tel">
+                        <label class="input-label">
+                            <input type="text" name="name" id="name" placeholder="NAME*">
+                        </label>
+                        <label class="input-label">
+                            <input type="tel" name="phone" id="phone" placeholder="PHONE*">
+                        </label>
+                    </div>
+                    <div class="message">
+                        <label>
+                            <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
+                        </label>
+                    </div>
+                    <button type="submit">SEND</button>
+                </form>
+                <div class="contacts">
+                    <h2 class="title title--booking">Contacts</h2>
+                    <address>
+                        <ul class="list-contacts">
+                            <li class="list-item-contacts">
+                                <a class="sub-title address" href="https://goo.gl/maps/KpEz4H7rG3fSzv7r7"
+                                    target="_blank" rel="noopener noreferrer">st. Vasilkivska, 7A Kyiv, 08132</a>
+                                <svg class="icon-contacts">
+                                    <use href="./img/sprite.svg#icon-map-pin"></use>
+                                </svg>
+                            </li>
+                            <li class="list-item-contacts">
+                                <a class="sub-title phone" href="tel:++380441111111">+38 044 111 11 11</a>
+                                <svg class="icon-contacts">
+                                    <use href="./img/sprite.svg#icon-phone"></use>
+                                </svg>
+                            </li>
+                            <li class="list-item-contacts">
+                                <a class="sub-title mail" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                                <svg class="icon-contacts">
+                                    <use href="./img/sprite.svg#icon-mail"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </address>
+                    <span class="sup-title working">WORKING HOURS</span>
+                    <p class="sub-title">Every day from 9:00 to 22:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section footer">
+        <div class="container container--footer">
+            <p class=" copy">&copy; Copyright 2023</p>
+            <ul class="some-footer">
+                <li class="some-footer-item"><a class="some" href="http://www.instagram.com" target="_blank"
+                        rel="noopener noreferrer">Instagram</a>
+                </li>
+                <li class="some-footer-item"><a class="some" href="http://www.youtube.com" target="_blank"
+                        rel="noopener noreferrer">Youtube</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <div class="backdrop is-hidden" data-backdrop>
+        <div class="modal">
+            <div class="booking-form--modal">
+                <form>
+                    <h2 class="title title--booking">Online-booking</h2>
+                    <div class="name-tel">
+                        <label class="input-label">
+                            <input type="text" name="name" id="name" placeholder="NAME*">
+                        </label>
+                        <label class="input-label">
+                            <input type="tel" name="phone" id="phone" placeholder="PHONE*">
+                        </label>
+                    </div>
+                    <div class="message">
+                        <label>
+                            <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
+                        </label>
+                    </div>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+            <button class="close-button" type="button" data-close-modal>
+                <svg class="icon-close" width="15px" height="15px">
+                    <use href="./img/sprite.svg#icon-cross"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
