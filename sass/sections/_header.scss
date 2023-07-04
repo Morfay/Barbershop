@@ -15,7 +15,8 @@
   display: flex;
 
   @media screen and (max-width: 767px) {
-    display: block;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -144,10 +145,6 @@
   &--open {
     @media screen and (max-width: 767px) {
       display: block;
-      position: absolute;
-      top: 0;
-      right: 5%;
-      transform: translateY(100%);
     }
   }
 

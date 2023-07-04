@@ -28,6 +28,11 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
 
+  @media screen and (max-width: 767px) {
+    width: 300px;
+    padding: 10px;
+  }
+
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(1.1);
   }
@@ -44,10 +49,23 @@
   position: absolute;
   top: 0;
   left: 100%;
-  transform: translate(50%, -150%);
-  min-width: 30px;
+  transform: translate(-150%, 50%);
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   opacity: 1;
   fill: #fff;
+}
+
+.title--booking--modal {
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+
+.button--modal {
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin: 0 auto;
+  }
 }

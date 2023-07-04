@@ -8,7 +8,8 @@
   background-position: right;
 
   @media screen and (max-width: 767px) {
-    background-image: none;
+    background-position: bottom;
+    background-size: 100% 50%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -38,6 +39,11 @@
 .title--booking {
   margin-bottom: 40px;
   color: var(--priority-title-color);
+
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+    text-align: center;
+  }
 }
 
 input {
@@ -129,12 +135,12 @@ textarea {
   width: 50%;
 
   @media screen and (max-width: 767px) {
-    display: block;
+    // display: block;
     width: 100%;
-    padding: 0;
-    background-image: url(../img/contact_bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 50px 0 0 0;
+    // background-image: url(../img/contact_bg.webp);
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
 }
 

@@ -184,6 +184,12 @@ ul {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
 }
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 300px;
+    padding: 10px;
+  }
+}
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
 }
@@ -199,12 +205,25 @@ ul {
   position: absolute;
   top: 0;
   left: 100%;
-  transform: translate(50%, -150%);
-  min-width: 30px;
+  transform: translate(-150%, 50%);
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   opacity: 1;
   fill: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .title--booking--modal {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button--modal {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .page-header {
@@ -226,7 +245,8 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .header {
-    display: block;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -360,10 +380,6 @@ ul {
 @media screen and (max-width: 767px) {
   .button_menu--open {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 5%;
-    transform: translateY(100%);
   }
 }
 @media screen and (max-width: 767px) {
@@ -445,7 +461,17 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .hero-content {
-    padding: 208px 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 208px 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -891,7 +917,8 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .booking {
-    background-image: none;
+    background-position: bottom;
+    background-size: 100% 50%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -923,6 +950,12 @@ ul {
 .title--booking {
   margin-bottom: 40px;
   color: var(--priority-title-color);
+}
+@media screen and (max-width: 767px) {
+  .title--booking {
+    font-size: 28px;
+    text-align: center;
+  }
 }
 
 input {
@@ -1031,12 +1064,8 @@ textarea:focus::placeholder {
 }
 @media screen and (max-width: 767px) {
   .contacts {
-    display: block;
     width: 100%;
-    padding: 0;
-    background-image: url(../img/contact_bg.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 50px 0 0 0;
   }
 }
 
@@ -1103,7 +1132,8 @@ textarea:focus::placeholder {
 }
 @media screen and (max-width: 767px) {
   .container--footer {
-    display: block;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
 }
 
@@ -1141,5 +1171,6 @@ textarea:focus::placeholder {
 @media screen and (max-width: 767px) {
   .some-footer {
     justify-content: center;
+    margin-left: 0;
   }
 }/*# sourceMappingURL=main.css.map */
