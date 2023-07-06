@@ -97,6 +97,11 @@ ul {
     padding: 50px 20px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .section {
+    padding: 100px 0;
+  }
+}
 
 .container {
   margin: 0 auto;
@@ -107,6 +112,12 @@ ul {
 @media screen and (max-width: 767px) {
   .container {
     max-width: 420px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .container {
+    max-width: 690px;
     padding: 0;
   }
 }
@@ -159,7 +170,6 @@ ul {
   width: 100%;
   padding: 32px 0;
   z-index: 1;
-  background-color: transparent;
 }
 @media screen and (max-width: 767px) {
   .page-header {
@@ -203,7 +213,6 @@ ul {
     height: 900px;
     background-color: #ffffff;
     padding: 48px 30px 0 40px;
-    outline: 1px solid red;
     transition: transform 250ms linear;
   }
 }
@@ -221,6 +230,12 @@ ul {
   .menu {
     display: block;
     margin: 0 0 64px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .menu {
+    margin-left: 58px;
+    gap: 20px;
   }
 }
 
@@ -276,6 +291,11 @@ ul {
     display: block;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .menu--right {
+    margin-right: 10px;
+  }
+}
 
 .phone-header {
   padding: 20px 0;
@@ -285,6 +305,11 @@ ul {
 @media screen and (max-width: 767px) {
   .phone-header {
     color: var(--secondary-text-color);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .phone-header {
+    display: none;
   }
 }
 
@@ -423,6 +448,12 @@ ul {
     letter-spacing: 2.4px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .title--hero {
+    font-size: 48px;
+    line-height: normal;
+  }
+}
 
 .sub-title--hero {
   max-width: 360px;
@@ -452,15 +483,25 @@ ul {
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .about_photo {
+    flex-direction: column;
+  }
+}
 
 .about_photo_item {
   margin-right: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .about_photo_item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .about__content {
   width: 470px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .about__content {
     width: 100%;
   }
@@ -476,14 +517,10 @@ ul {
   color: var(--secondary-text-color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .title--about {
     font-size: 28px;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
     line-height: normal;
-    letter-spacing: 1.4px;
   }
 }
 
@@ -635,6 +672,11 @@ ul {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .list__why {
+    margin-left: auto;
+  }
+}
 
 .list__item__why {
   display: flex;
@@ -695,9 +737,20 @@ ul {
   margin-bottom: 20px;
   color: var(--secondary-text-color);
 }
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .sup-title--why,
+  .title--why {
+    max-width: 450px;
+  }
+}
 
 .why__text {
   color: var(--text-fill-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .why__text {
+    max-width: 500px;
+  }
 }
 
 .barbers {
@@ -717,7 +770,7 @@ ul {
   display: flex;
   gap: 30px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .list__barbers {
     display: block;
   }
@@ -726,7 +779,7 @@ ul {
 .list__barbers__item {
   width: calc((100% - 60px) / 3);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .list__barbers__item {
     display: flex;
     flex-direction: column;
@@ -735,7 +788,7 @@ ul {
     margin-bottom: 64px;
   }
 }
-@media screen and (max-width: 767px) and (max-width: 767px) {
+@media screen and (max-width: 1170px) and (max-width: 1170px) {
   .list__barbers__item:last-child {
     margin-bottom: 0px;
   }
@@ -824,14 +877,28 @@ ul {
     align-items: center;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .portfolio {
+    flex-wrap: wrap;
+  }
+}
 
 .portfolio__item {
   width: calc((100% - 90px) / 3);
 }
 @media screen and (max-width: 767px) {
   .portfolio__item {
-    width: auto;
+    width: 100%;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .portfolio__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+.portfolio__item > img {
+  width: 100%;
 }
 
 .booking {
@@ -843,7 +910,7 @@ ul {
   background-size: 50% 100%;
   background-position: right;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .booking {
     background-position: bottom;
     background-size: 100% 50%;
@@ -856,10 +923,16 @@ ul {
   display: flex;
   padding-right: 10px;
 }
+@media screen and (max-width: 1170px) {
+  .container--booking {
+    flex-direction: column;
+    padding: 0;
+    gap: 200px;
+  }
+}
 @media screen and (max-width: 767px) {
   .container--booking {
-    display: block;
-    padding: 0;
+    gap: 168px;
   }
 }
 
@@ -867,10 +940,11 @@ ul {
   width: 50%;
   padding-right: 10px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .booking-form {
     display: block;
     width: 100%;
+    height: 50%;
     padding: 0;
   }
 }
@@ -992,10 +1066,17 @@ textarea:focus::placeholder {
   padding-left: 105px;
   width: 50%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .contacts {
     width: 100%;
-    padding: 50px 0 0 0;
+    height: 50%;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .contacts {
+    flex-direction: row;
+    gap: 100px;
   }
 }
 
@@ -1044,6 +1125,12 @@ textarea:focus::placeholder {
 .working {
   margin-bottom: 20px;
   color: var(--priority-title-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1170px) {
+  .working-hours {
+    margin-top: 90px;
+  }
 }
 
 .footer {
@@ -1135,10 +1222,15 @@ textarea:focus::placeholder {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
   .modal {
     width: 300px;
     padding: 10px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1170px) {
+  .modal {
+    transform: translate(-50%, -50%) scale(0.8);
   }
 }
 .backdrop.is-hidden .modal {

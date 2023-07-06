@@ -28,9 +28,13 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
     width: 300px;
     padding: 10px;
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 1170px) {
+    transform: translate(-50%, -50%) scale(0.8);
   }
 
   .backdrop.is-hidden & {

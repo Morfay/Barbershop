@@ -22,6 +22,10 @@
     margin: 0 auto;
     justify-content: space-between;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1170px){
+    margin-left: auto;
+  }
 }
 
 .list__item__why {
@@ -82,8 +86,16 @@
 .title--why {
   margin-bottom: 20px;
   color: var(--secondary-text-color);
+
+  @media screen and (min-width: 768px) and (max-width: 1170px){
+    max-width: 450px;
+  }
 }
 
 .why__text {
   color: var(--text-fill-color);
+
+  @media screen and (min-width: 768px) and (max-width: 1170px){
+    max-width: 500px;
+  }
 }

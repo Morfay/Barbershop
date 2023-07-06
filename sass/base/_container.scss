@@ -8,4 +8,9 @@
     max-width: 420px;
     padding: 0;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1170px) {
+    max-width: 690px;
+    padding: 0;
+  }
 }
