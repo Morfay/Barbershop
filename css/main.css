@@ -218,7 +218,7 @@ ul {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     transform: translateX(100%);
