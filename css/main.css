@@ -15,6 +15,15 @@ body {
   letter-spacing: 0.1em;
   color: var(--priority-title-color);
 }
+@media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -205,20 +214,28 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .header_nav {
-    display: none;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     position: absolute;
-    top: -35px;
+    top: 0;
     right: 0;
+    transform: translateX(100%);
     width: 66%;
-    height: 900px;
+    height: 100vh;
     background-color: #ffffff;
     padding: 48px 30px 0 40px;
     transition: transform 250ms linear;
   }
 }
 
-.header_nav.is-open {
-  display: block;
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateX(0%);
+  transition: transform 250ms linear;
 }
 
 .menu {
@@ -382,7 +399,7 @@ ul {
   padding-left: 17px;
   padding-bottom: 40px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .aside-hero {
     display: none;
   }
@@ -402,7 +419,7 @@ ul {
   background-color: var(--secondary-text-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .hero-content {
     flex-grow: 1;
     padding: 273px 20px 40px 100px;
@@ -448,7 +465,7 @@ ul {
     letter-spacing: 2.4px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1170px) {
+@media screen and (min-width: 767px) and (max-width: 1170px) {
   .title--hero {
     font-size: 48px;
     line-height: normal;

@@ -2,6 +2,7 @@
             openModalBtns: document.querySelectorAll("[data-open-modal]"),
             closeModalBtn: document.querySelector("[data-close-modal]"),
             backdrop: document.querySelector("[data-backdrop]"),
+            body: document.querySelector("body"),
         };
 
         console.log(refs.openModalBtns);
@@ -16,6 +17,7 @@
 
         function toggleModal() {
             refs.backdrop.classList.toggle("is-hidden");
+            refs.body.classList.toggle("no-scroll");
         }
 
         function logBackdropClick() {

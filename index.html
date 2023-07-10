@@ -27,25 +27,26 @@
                     </svg>
                 </a>
 
-                <button class="button_menu button_menu--open" type="button" data-menu-button>
+                <button class="button_menu button_menu--open" type="button" data-menu-open>
                     <svg class="icon_menu--open" width="40px" height="40px">
                         <use href="./img/sprite.svg#icon-menu"></use>
                     </svg>
                 </button>
 
                 <div class="header_nav" data-menu>
-                    <button class="button_menu button_menu--close" type="button" data-menu-button>
+                    <button class="button_menu button_menu--close" type="button" data-menu-close>
                         <svg class="icon_menu icon_menu--close" width="40px" height="40px">
                             <use href="./img/sprite.svg#icon-cross"></use>
                         </svg>
                     </button>
                     <nav>
                         <ul class="menu">
-                            <li class="list-item-menu"><a class="link-menu" href="">About</a></li>
-                            <li class="list-item-menu"><a class="link-menu" href="./test.html">Services and
+                            <li class="list-item-menu"><a class="link-menu" href="#about" scroll>About</a>
+                            </li>
+                            <li class="list-item-menu"><a class="link-menu" href="#services" scroll>Services and
                                     prices</a></li>
-                            <li class="list-item-menu"><a class="link-menu" href="">Barbers</a></li>
-                            <li class="list-item-menu"><a class="link-menu" href="">Contacts</a></li>
+                            <li class="list-item-menu"><a class="link-menu" href="#barbers">Barbers</a></li>
+                            <li class="list-item-menu"><a class="link-menu" href="#contacts">Contacts</a></li>
                         </ul>
                     </nav>
                     <ul class="menu--right">
@@ -62,7 +63,6 @@
                                 rel="noopener noreferrer">
                                 Instagram</a>
                         </li>
-
                         <li>
                             <a class="some-in-menu-item" href="http://www.youtube.com" target="_blank"
                                 rel="noopener noreferrer">
@@ -104,7 +104,7 @@
             </div>
         </section>
 
-        <article class="section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <article class="section" id="about" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <div class="container about">
                 <ul class="about_photo">
                     <li class="about_photo_item"><img src="./img/img1.jpg" alt="Photo" width="270" height="445"></li>
@@ -133,7 +133,7 @@
             </div>
         </article>
 
-        <section class="section section--services">
+        <section class="section section--services" id="services">
             <div class="container">
                 <p class="sup-title sup-title--services">Spend your time with the best masters</p>
                 <h2 class="title title--services">Services and prices</h2>
@@ -228,7 +228,7 @@
             </div>
         </section>
 
-        <section class="section barbers">
+        <section class="section barbers" id="barbers">
             <div class="container barbers">
                 <p class="sup-title sup-title--barbers">For true enjoyers of the atmosphere</p>
                 <h2 class="title title--barbers">Our barbers</h2>
@@ -391,7 +391,7 @@
             </div>
         </section>
 
-        <section class="section booking">
+        <section class="section booking" id="contacts">
             <div class="container container--booking">
                 <form class="booking-form">
                     <h2 class="title title--booking">Online-booking</h2>
@@ -492,6 +492,7 @@
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/scroll.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

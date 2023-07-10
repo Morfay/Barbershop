@@ -6,6 +6,14 @@ body {
   line-height: 16px;
   letter-spacing: 0.1em;
   color: var(--priority-title-color);
+
+  @media screen and (max-width: 767px) {
+    overflow-x: hidden;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 h1,
