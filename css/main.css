@@ -84,6 +84,36 @@ ul {
   padding: 0;
 }
 
+.button-up {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(157, 164, 189, 0.5);
+  background-color: rgba(157, 164, 189, 0.2);
+  border-radius: 5px;
+  padding: 0;
+}
+.button-up:hover {
+  border: 1px solid rgba(157, 164, 189, 0.7);
+  background-color: rgba(157, 164, 189, 0.5);
+}
+.button-up:hover .button-up-icon {
+  opacity: 0.7;
+  fill: #ffffff;
+}
+
+.button-up-icon {
+  opacity: 0.5;
+  fill: #ffffff;
+  transition: 250ms linear;
+}
+
 .hide {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -215,9 +245,9 @@ ul {
 @media screen and (max-width: 767px) {
   .header_nav {
     display: block;
-    opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    overflow-y: auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -225,17 +255,16 @@ ul {
     width: 66%;
     height: 100vh;
     background-color: #ffffff;
-    padding: 48px 30px 0 40px;
-    transition: transform 250ms linear;
+    padding: 40px 30px 30px 40px;
+    transition: 250ms linear;
   }
 }
 
 .is-open {
-  opacity: 1;
   visibility: visible;
   pointer-events: all;
   transform: translateX(0%);
-  transition: transform 250ms linear;
+  transition: 250ms linear;
 }
 
 .menu {
@@ -356,7 +385,7 @@ ul {
   .button_menu--close {
     display: block;
     margin-left: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 
@@ -503,6 +532,8 @@ ul {
 @media screen and (min-width: 768px) and (max-width: 1170px) {
   .about_photo {
     flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
   }
 }
 
@@ -510,9 +541,12 @@ ul {
   margin-right: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 1170px) {
-  .about_photo_item:not(:last-child) {
-    margin-bottom: 30px;
+  .about_photo_item {
+    margin-right: 0;
   }
+}
+.about_photo_item img {
+  max-width: 100%;
 }
 
 .about__content {
@@ -821,7 +855,7 @@ ul {
 
 @media screen and (max-width: 767px) {
   .barber-photo {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -914,8 +948,8 @@ ul {
   }
 }
 
-.portfolio__item > img {
-  width: 100%;
+.portfolio__item img {
+  max-width: 100%;
 }
 
 .booking {

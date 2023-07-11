@@ -12,7 +12,7 @@
     align-items: center;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1170px){
+  @media screen and (min-width: 768px) and (max-width: 1170px) {
     flex-wrap: wrap;
   }
 }
@@ -29,6 +29,6 @@
   }
 }
 
-.portfolio__item > img {
-  width: 100%;
+.portfolio__item img{
+  max-width: 100%;
 }

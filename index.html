@@ -107,8 +107,18 @@
         <article class="section" id="about" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <div class="container about">
                 <ul class="about_photo">
-                    <li class="about_photo_item"><img src="./img/img1.jpg" alt="Photo" width="270" height="445"></li>
-                    <li class="about_photo_item"><img src="./img/img2.jpg" alt="Photo" width="270"></li>
+                    <li class="about_photo_item">
+                        <picture>
+                            <source srcset="./img/img1_tab.webp" media="(min-width: 768px) and (max-width: 1170px)">
+                            <img src="./img/img1.jpg" alt="Photo">
+                        </picture>
+                    </li>
+                    <li class="about_photo_item">
+                        <picture>
+                            <source srcset="./img/img2_tab.webp" media="(min-width: 768px) and (max-width: 1170px)">
+                            <img src="./img/img2.jpg" alt="Photo">
+                        </picture>
+                    </li>
                 </ul>
                 <div class="about__content">
                     <p class="sup-title sup-title--about">About</p>
@@ -235,8 +245,12 @@
                 <ul class="list__barbers">
                     <li class="list__barbers__item">
                         <div class="thumb">
-                            <img class="barber-photo" src="./img/john_smith.jpg" alt="John Smith" width="370"
-                                height="346px">
+                            <picture>
+                                <source srcset="./img/john_smith_mob.webp" media="(max-width: 767px)">
+                                <source srcset="./img/john_smith_tab.webp"
+                                    media="(min-width: 768px) and (max-width: 1170px)">
+                                <img class="barber-photo" src="./img/john_smith.jpg" alt="John Smith">
+                            </picture>
                             <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim soluta
                                 sed ad, quod
                                 exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
@@ -282,8 +296,12 @@
                     </li>
                     <li class="list__barbers__item">
                         <div class="thumb">
-                            <img class="barber-photo" src="./img/michele_doe.jpg" alt="Michele Doe" width="370"
-                                height="346px">
+                            <picture>
+                                <source srcset="./img/michele_doe_mob.webp" media="(max-width: 767px)">
+                                <source srcset="./img/michele_doe_tab.webp"
+                                    media="(min-width: 768px) and (max-width: 1170px)">
+                                <img class="barber-photo" src="./img/michele_doe.jpg" alt="John Smith">
+                            </picture>
                             <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
                                 soluta sed ad, quod
                                 exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
@@ -329,8 +347,12 @@
                     </li>
                     <li class="list__barbers__item">
                         <div class="thumb">
-                            <img class="barber-photo" src="./img/alan_black.jpg" alt="Alan Black" width="370"
-                                height="346px">
+                            <picture>
+                                <source srcset="./img/alan_black_mob.webp" media="(max-width: 767px)">
+                                <source srcset="./img/alan_black_tab.webp"
+                                    media="(min-width: 768px) and (max-width: 1170px)">
+                                <img class="barber-photo" src="./img/alan_black.jpg" alt="John Smith">
+                            </picture>
                             <p class="thumb-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
                                 soluta sed ad, quod
                                 exercitationem dolor perferendis nulla alias voluptas laudantium eaque commodi amet
@@ -383,10 +405,38 @@
                 <h2 class="hide">Portfolio</h2>
                 <p class="sup-title sup-title--portfolio">In Latin, "barba" means "beard"</p>
                 <ul class="portfolio">
-                    <li class="portfolio__item"><img src="./img/rectangle25.jpg" alt="Photo" width="270"></li>
-                    <li class="portfolio__item"><img src="./img/rectangle26.jpg" alt="Photo" width="270"></li>
-                    <li class="portfolio__item"><img src="./img/rectangle27.jpg" alt="Photo" width="270"></li>
-                    <li class="portfolio__item"><img src="./img/rectangle28.jpg" alt="Photo" width="270"></li>
+                    <li class="portfolio__item">
+                        <picture>
+                            <source srcset="./img/rectangle25_mob.webp" media="(max-width: 767px)">
+                            <source srcset="./img/rectangle25_tab.webp"
+                                media="(min-width: 768px) and (max-width: 1170px)">
+                            <img src="./img/rectangle25.jpg" alt="Photo">
+                        </picture>
+                    </li>
+                    <li class="portfolio__item">
+                        <picture>
+                            <source srcset="./img/rectangle26_mob.webp" media="(max-width: 767px)">
+                            <source srcset="./img/rectangle26_tab.webp"
+                                media="(min-width: 768px) and (max-width: 1170px)">
+                            <img src="./img/rectangle26.jpg" alt="Photo">
+                        </picture>
+                    </li>
+                    <li class="portfolio__item">
+                        <picture>
+                            <source srcset="./img/rectangle27_mob.webp" media="(max-width: 767px)">
+                            <source srcset="./img/rectangle27_tab.webp"
+                                media="(min-width: 768px) and (max-width: 1170px)">
+                            <img src="./img/rectangle27.jpg" alt="Photo">
+                        </picture>
+                    </li>
+                    <li class="portfolio__item">
+                        <picture>
+                            <source srcset="./img/rectangle28_mob.webp" media="(max-width: 767px)">
+                            <source srcset="./img/rectangle28_tab.webp"
+                                media="(min-width: 768px) and (max-width: 1170px)">
+                            <img src="./img/rectangle28.jpg" alt="Photo">
+                        </picture>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -460,6 +510,13 @@
         </div>
     </footer>
 
+    <div>
+        <button class="button-up" type="button" scrollButton>
+            <svg class="button-up-icon" width="25px" height="25px">
+                <use href="./img/sprite.svg#icon-arrow-up"></use>
+            </svg>
+        </button>
+    </div>
 
     <div class="backdrop is-hidden" data-backdrop>
         <div class="modal">
@@ -493,6 +550,7 @@
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/scroll.js"></script>
+    <script src="./js/scroll_up.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
