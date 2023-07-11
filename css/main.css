@@ -853,7 +853,10 @@ ul {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 767px) {
+.barber-photo {
+  max-width: 100%;
+}
+@media screen and (max-width: 1170px) {
   .barber-photo {
     max-width: 100%;
   }
